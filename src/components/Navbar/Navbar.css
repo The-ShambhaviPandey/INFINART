@@ -1,63 +1,193 @@
-body{
-    font-family:'Poppins';
+body {
+  font-family: 'Poppins';
 }
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 70px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
 
+.navbar-nav-container {
+  position: relative;
+  margin-left: 40px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+
+.dropdown-menu {
+  visibility: hidden;
+  position: absolute;
+  top: 100%; 
+  width: 100%;
+  left: 0;
+  margin-top: 5px; 
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 999;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-top: 27px;
+  width: max-content; 
+  min-width: 500px;   
+  max-width: 90vw;
+  transform: translateY(20px);
+  pointer-events: none;
   
-.navbar-logo {
+
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  opacity: 1; 
+  transform: translateY(0);
+  gap:40px;
+  pointer-events: auto;
+  
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+/* Dropdown Link styling */
+.dropdown-trigger {
+  color: black;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown:hover .dropdown-trigger {
+  color: #20BFA5;
+  
+}
+
+.navbar-logo a{
     font-size: 1.8rem;
     font-weight: bold;
     color: #20BFA5;
-  }
+    text-decoration: none  !important;
+}
 
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    font-size: 17px;
-  }
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  font-size: 17px;
+  position: relative;
+  list-style:none;
+}
 
-  .navbar-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
 
-  .navbar-links li a:hover {
-    color: #20BFA5;
-    text-decoration: underline;
-  }
+.navbar-links li a:hover {
+  color: #20BFA5;
+  text-decoration: underline;
+  position: relative;
+}
 
-  .login_button {
-    font-family: Poppins;
-    width: 140px;
-    font-weight: 500;
-    background-color: #20BFA5;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 15px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-  }
+.login_button {
+  font-family: Poppins;
+  width: 140px;
+  font-weight: 500;
+  background-color: #20BFA5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
 
-    .login_button:hover {
-        background-color: #1a9f8c;
-    }
+.login_button:hover {
+   background-color: #1a9f8c;
+}
 
-    
+.mega-menu {
+  display: flex;
+  flex-direction: row; 
+  gap: 2rem; 
+  justify-content: justify;
+}
+  
+.mega-column {
+  flex: 1;
+  min-width: 100px; 
+  justify-content: center;
+}
+
+.mega-column a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.mega-column a:hover {
+  color: #20BFA5;
+}
+  
+.mega-column h4 a {
+  margin-top: 2px;
+  text-decoration: none;
+  color: #20BFA5;
+  transition: color 0.2s ease;
+  font-weight: 1000;
+}
+  
+.mega-column h4 a:hover {
+  color: #20BFA5; 
+  text-decoration: underline;
+}
+  
+.mega-column ul {
+  list-style: none;
+  padding: 0;
+}
+  
+.mega-column li {
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+  
+.mega-column li:hover {
+  color: #00bcd4;
+}
+
+.dropdown:hover + .mega-dropdown,
+.navbar-nav-container:hover .mega-dropdown {
+  display: flex;
+}
+
+
+  

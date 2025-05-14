@@ -1,5 +1,5 @@
 import React from "react";
-import "./ScrollSection.css";
+import "./Scrollsection.css";
 
 const ScrollSection = () => {
   return (

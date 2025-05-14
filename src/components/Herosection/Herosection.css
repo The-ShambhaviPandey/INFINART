@@ -12,7 +12,7 @@
     border-radius: 12px;
     padding: 30px;
     background-size: cover;
-    background-position: center;
+    background-position: center ;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
@@ -27,5 +27,6 @@
     min-width: 200px;
     height: 320px;
     align-self: flex-end;
+    background-position: top;
   }
   

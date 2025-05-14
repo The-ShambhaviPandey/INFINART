@@ -34,7 +34,9 @@ const BestSellers = () => {
 
   return (
     <section className="best-sellers-section">
-      <h2 className="section-title">The Best Sellers :</h2>
+      <b>
+      <h2 className="section-title">The Best Sellers </h2>
+      </b>
       <div className="slider-wrapper">
         <button className="arrow left" onClick={() => scroll("left")}>
           &#8249;
